@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head><meta charset="utf-8"><title>診斷書 {{ case.case_no }}</title>
+<style>
+@font-face { font-family: ReportSerif; src: url('{{ font_url }}') format('opentype'); font-weight: 100 900; }
+@page { size: A4; margin: 16mm 15mm 17mm; }
+* { box-sizing: border-box; }
+body { margin: 0; color: #252822; font-family: ReportSerif; font-size: 10pt; line-height: 1.65; }
+h1 { font-size: 21pt; letter-spacing: .12em; text-align: center; margin: 4mm 0 0; }
+h2 { font-size: 12pt; letter-spacing: .12em; margin: 5mm 0 2mm; break-after: avoid; }
+p { margin: 0; } .sub { text-align: center; font-size: 14pt; letter-spacing: .32em; }
+.org { text-align: center; font-size: 10pt; } .status { text-align: center; font-size: 8pt; color: #696758; }
+.meta { display: flex; justify-content: space-between; margin: 5mm 0 2mm; font-size: 9pt; }
+table { width: 100%; border-collapse: collapse; table-layout: fixed; }
+th,td { border: .6pt solid #777668; padding: 2mm; text-align: left; vertical-align: top; overflow-wrap: anywhere; }
+th { background: #f2f0e9; font-weight: bold; } .label { width: 18%; }
+.text { white-space: pre-wrap; overflow-wrap: anywhere; } .box { border: .6pt solid #777668; padding: 2.5mm; min-height: 16mm; }
+thead { display: table-header-group; } .rx { font-size: 8.5pt; } .rx th { font-size: 8pt; } .rx td { padding: 2mm 1.5mm; }
+.muted { color: #626258; font-size: 8pt; } .mark { color: #76551a; font-size: 8pt; }
+.signature { display: flex; justify-content: space-between; margin-top: 8mm; line-height: 2.8; break-inside: avoid; }
+.footer { border-top: .6pt solid #aaa; margin-top: 5mm; padding-top: 2mm; font-size: 8pt; color: #666; }
+.appendix { break-before: page; } .item-head { margin-top: 4mm; break-after: avoid; font-weight: bold; }
+.check { padding: 1.5mm 0; border-bottom: .5pt dotted #ccc; } .source { margin: 2mm 0; padding: 2mm; background: #f7f7f3; }
+.breakable { white-space: pre-wrap; overflow-wrap: anywhere; } .small { font-size: 8.5pt; }
+</style></head>
+<body>
+<div class="org">執業機構：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</div>
+<h1>植物疫病蟲害診斷書</h1><div class="sub">暨防治意見書</div>
+<div class="status">暫定版型 · {% if case.status == 'issued' %}已開立紀錄{% else %}草稿預覽 · 尚未開立{% endif %} · 簽章欄由診療師核實填寫</div>
+<div class="meta"><span>案件編號：{{ case.case_no }}</span><span>開立日期：{% if case.issued_at %}中華民國 {{ case.issued_at|roc }}{% else %}尚未開立{% endif %}</span></div>
+<table>
+<tr><th class="label">委託人</th><td>{{ case.farmer_text }}</td><th class="label">聯絡電話</th><td>＿＿＿＿＿＿＿＿</td></tr>
+<tr><th>田區位置</th><td colspan="3">{{ case.field_text or '未填' }}　面積：{{ case.area_text or '未填' }}</td></tr>
+<tr><th>作物／品種</th><td>{{ case.crop_text }}{% if case.variety %}（{{ case.variety }}）{% endif %}</td><th>預計採收</th><td>{{ case.expected_harvest_on|roc }}</td></tr>
+<tr><th>診察方式</th><td colspan="3">{% for key,label in examinations.items() %}{{ '■' if key in case.examined_by else '□' }} {{ label }}　{% endfor %}</td></tr>
+</table>
+<h2>一、田間狀況與病徵</h2><div class="box text">{{ case.symptoms or '未填' }}</div>
+<h2>二、診斷結果</h2>
+<table><tr><th class="label">病蟲害名稱</th><td class="text">{{ case.diagnosis_text or '未填' }}</td></tr>
+<tr><th>診斷依據</th><td>{% for key,label in bases.items() %}{{ '■' if key in case.diagnosis_basis else '□' }} {{ label }}　{% endfor %}</td></tr></table>
+<h2>三、防治處方與意見</h2>
+<table class="rx"><thead><tr><th style="width:22%">藥劑名稱／含量／劑型</th><th style="width:19%">有效成分／作用機制</th><th style="width:12%">稀釋倍數</th><th style="width:13%">每公頃量</th><th style="width:23%">施用方法與次數</th><th style="width:11%">安全採收期</th></tr></thead><tbody>
+{% for item in case['items'] %}<tr><td>{{ item.product_text }}</td><td>{{ item.ingredient_text }}<br>{{ item.moa_text or '未載明' }}</td><td>{{ item.dilution or '未載明' }}</td><td>{{ item.dose or '未載明' }}</td><td>{{ item.frequency or '未填' }}<br>{{ item.source_values.get('comparison',{}).get('application_method') or '' }}</td><td>{{ item.phi_days if item.phi_days is not none else '未載明' }}{% if item.phi_days is not none %} 天{% endif %}</td></tr>{% else %}<tr><td colspan="6">本案未列藥劑處方。</td></tr>{% endfor %}
+</tbody></table>
+<p style="margin-top:3mm"><b>非藥劑防治建議</b></p><p class="text">{{ case.cultural_control or '未填' }}</p>
+{% for item in case['items'] %}{% if item.advice %}<p class="text small">{{ item.product_text }} — 囑咐：{{ item.advice }}</p>{% endif %}{% endfor %}
+<div class="signature"><div>植物診療師：＿＿＿＿＿＿（簽名／蓋章）<br>證書字號：＿＿＿＿＿＿＿＿＿＿</div><div>執業機構：＿＿＿＿＿＿＿＿<br>複診／追蹤日期：＿＿＿＿＿＿</div></div>
+<div class="footer">本版為功能展示用暫定版型，非主管機關核定表單。簽署欄位尚未驗證。處方檢查與三源依據詳見附件；重印保留原始紀錄，不代表重新核對現行公告。</div>
+<section class="appendix"><h2>附件：處方檢查與來源留存</h2><p class="muted">案件 {{ case.case_no }} · 以下均為處方當時儲存值；不以重印日期重新計算。</p>
+{% for item in case['items'] %}
+<p class="item-head">{{ loop.index }}. {{ item.product_text }}</p>
+{% for check in item.checks %}<div class="check small">【{{ levels.get(check.level,check.level) }}】{{ check.message }}{% if check.get('snapshot_id') is not none %}（檢查快照 #{{ check.snapshot_id }}）{% endif %}</div>{% else %}<p>未留存檢查結果。</p>{% endfor %}
+{% if item.modified_fields %}<p class="mark">醫師修改欄位：{% for field in item.modified_fields %}{{ fields.get(field,field) }}（來源：{{ item.source_values.get(field) or '未載明' }}）{% if not loop.last %}；{% endif %}{% endfor %}</p>{% endif %}
+{% set comparison=item.source_values.get('comparison',{}) %}
+{% set sources=comparison.get('sources',item.source_values.get('sources',{})) %}
+{% for key,label in source_labels.items() %}{% set s=sources.get(key,{}) %}<div class="source small"><b>{{ label }}</b> · {{ '有收錄' if s.get('present') else '未收錄或未留存' }}<br>文件：{{ s.get('document') or '未載明' }}<br>版本：{{ s.get('version') or '無版本號，以抓取時間為準' }} · 抓取：{{ s.get('fetched_at') or '未留存' }} · 快照：{{ s.get('snapshot_id') if s.get('snapshot_id') is not none else '未留存' }}<br><span class="breakable">來源：{{ s.get('url') or '未留存' }}</span></div>{% endfor %}
+{% for mrl in comparison.get('mrls',item.source_values.get('mrls',[])) %}<p class="small">容許量留存：{{ mrl.ingredient_name }} · {{ mrl.matched_category or '類別未匹配' }} · {{ mrl.limit_ppm if mrl.limit_ppm is not none else (mrl.limit_text or '未載明') }}{% if mrl.limit_ppm is not none %} ppm{% endif %}</p>{% endfor %}
+{% else %}<p>本案無藥劑處方來源附件。</p>{% endfor %}
+</section></body></html>

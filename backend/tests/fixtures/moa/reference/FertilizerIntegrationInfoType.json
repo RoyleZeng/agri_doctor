@@ -1,0 +1,22 @@
+[
+  {
+    "FertilizerID": "肥進(生)字第0101007號     ",
+    "IndustryName": "台灣拜耳股份有限公司",
+    "BrandName": "顧根勇欉",
+    "ItemName": "溶磷菌肥料",
+    "ExpiryDate": "20271027",
+    "SellerAddress": "臺北市信義區信義路5段7號53樓",
+    "SellerPhone": "02-81011000",
+    "Element": "全氮:1.0,全氧化鉀:5.5,溶磷菌有效活菌數:"
+  },
+  {
+    "FertilizerID": "肥進(生)字第0101009號     ",
+    "IndustryName": "台灣拜耳股份有限公司",
+    "BrandName": "顧葉掌粒",
+    "ItemName": "溶磷菌肥料",
+    "ExpiryDate": "20290305",
+    "SellerAddress": "臺北市信義區信義路5段7號53樓",
+    "SellerPhone": "02-81011000",
+    "Element": "全氮:2.0,全磷酐:0.9,溶磷菌有效活菌數:"
+  }
+]

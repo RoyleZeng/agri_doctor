@@ -1,0 +1,22 @@
+[
+  {
+    "Station_name": "北竿",
+    "Station_ID": "C0W220",
+    "Station_Latitude": "26.22035800000000",
+    "Station_Longitude": "119.97488100000000",
+    "CITY": "連江縣",
+    "CITY_SN": "09007",
+    "TOWN": "北竿鄉",
+    "TOWN_SN": "09007020"
+  },
+  {
+    "Station_name": "東莒",
+    "Station_ID": "C0W110",
+    "Station_Latitude": "25.96519700000000",
+    "Station_Longitude": "119.98068600000000",
+    "CITY": "連江縣",
+    "CITY_SN": "09007",
+    "TOWN": "莒光鄉",
+    "TOWN_SN": "09007030"
+  }
+]

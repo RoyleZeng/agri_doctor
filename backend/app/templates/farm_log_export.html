@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head><meta charset="utf-8"><title>農事作業紀錄表</title>
+<style>
+@font-face { font-family: ReportSerif; src: url('{{ font_url }}') format('opentype'); font-weight: 100 900; }
+@page { size: A4; margin: 14mm 13mm 15mm; }
+* { box-sizing: border-box; }
+body { margin: 0; color: #151713; font-family: ReportSerif; font-size: 9.3pt; line-height: 1.5; }
+h1 { text-align: center; font-size: 18pt; letter-spacing: .3em; margin: 0 0 1mm; }
+.sub { text-align: center; font-size: 8.8pt; color: #444; letter-spacing: .06em; margin-bottom: 3.5mm; }
+table { width: 100%; border-collapse: collapse; table-layout: fixed; }
+th, td { border: .6pt solid #555; padding: 1.2mm 1.5mm; vertical-align: top; overflow-wrap: anywhere; font-size: 8.6pt; }
+th { background: #f2f0e9; font-weight: bold; }
+.ft th { width: 20mm; text-align: left; letter-spacing: .06em; }
+.lt th { text-align: center; }
+thead { display: table-header-group; }
+tr { break-inside: avoid; }
+.c { text-align: center; } .n { text-align: right; }
+tr.miss td { background: #fdf7ea; } .pending { color: #8a5a00; }
+tr.violation td { background: #fbebe9; } tr.violation .result { color: #9b2317; font-weight: bold; } tr.unknown .result { color: #8a5a00; }
+.sec { font-weight: bold; font-size: 10.5pt; letter-spacing: .15em; margin: 4mm 0 1.5mm; break-after: avoid; }
+.empty { text-align: center; color: #777; }
+.notes { font-size: 8pt; color: #333; line-height: 1.65; margin: 2.5mm 0 0; padding-left: 5mm; }
+/* 簽名列與保存說明一起換頁，不讓說明文字單獨落在一張幾乎空白的頁面。 */
+.closing { break-inside: avoid; }
+.signrow { display: flex; justify-content: space-between; gap: 6mm; margin-top: 5mm; font-size: 9.2pt; }
+.sig { display: inline-block; min-width: 34mm; border-bottom: .6pt solid #555; text-align: center; }
+.legal { margin-top: 3mm; padding-top: 2mm; border-top: .6pt solid #999; font-size: 7.8pt; color: #555; line-height: 1.6; }
+.appendix { break-before: page; }
+.grid { display: flex; flex-wrap: wrap; justify-content: space-between; }
+.ph { width: 49%; margin-bottom: 3.5mm; padding: 2mm; border: .6pt solid #999; break-inside: avoid; }
+.ph .img { height: 64mm; display: flex; align-items: center; justify-content: center; background: #f4f4f0; }
+.ph img { max-width: 100%; max-height: 64mm; }
+.ph .cap { margin-top: 1.5mm; font-size: 7.8pt; line-height: 1.55; }
+</style></head>
+<body>
+<h1>農事作業紀錄表</h1>
+<div class="sub">依產銷履歷農產品驗證基準第五、六條記載事項編製 · 供補助申請與驗證查核</div>
+<table class="ft">
+<tr><th>農場名稱</th><td>{{ d.farm_name }}</td><th>經營者</th><td>{{ d.operator }}</td></tr>
+<tr><th>場區</th><td>{{ d.field_label }}</td><th>面積</th><td>{{ d.area_label }}</td></tr>
+<tr><th>品項／品種</th><td>{{ d.crop_label }}</td><th>紀錄期間</th><td>{{ d.period_label }}</td></tr>
+</table>
+
+<div class="sec">一、作業紀錄</div>
+<table class="lt">
+<thead><tr><th style="width:13mm">日期</th><th style="width:17mm">作業項目</th>{% if d.show_field_column %}<th style="width:22mm">場區／面積</th>{% endif %}<th style="width:44mm">資材品名／供應者／批號</th><th style="width:19mm">用量</th><th>作業說明</th><th style="width:12mm">照片</th></tr></thead>
+<tbody>
+{% for r in d.rows %}<tr{% if r.miss %} class="miss"{% endif %}><td class="c">{{ r.date_label }}{% if r.done_time %}<br>{{ r.done_time }}{% endif %}</td><td class="c">{{ r.kind_label }}</td>{% if d.show_field_column %}<td>{{ r.field_text }}{% if r.area_text %}<br>{{ r.area_text }}{% endif %}</td>{% endif %}<td>{{ r.material }}{% if r.material_pending %}<span class="pending">{{ r.material_pending }}</span>{% endif %}</td><td class="n">{{ r.amount }}{% if r.amount_pending %}<span class="pending">{{ r.amount_pending }}</span>{% endif %}</td><td>{{ r.description }}</td><td class="c">{{ r.photos_label }}</td></tr>
+{% else %}<tr><td colspan="{{ 7 if d.show_field_column else 6 }}" class="empty">本期無作業紀錄</td></tr>{% endfor %}
+</tbody>
+</table>
+
+<div class="sec">二、採收與產量</div>
+<table class="lt">
+<thead><tr><th style="width:13mm">日期</th>{% if d.show_field_column %}<th style="width:24mm">場區</th>{% endif %}<th>品項／批次</th><th style="width:26mm">產量</th><th>去向</th></tr></thead>
+<tbody>
+{% for h in d.harvests %}<tr><td class="c">{{ h.date_label }}</td>{% if d.show_field_column %}<td>{{ h.field_text }}</td>{% endif %}<td>{{ h.item }}</td><td class="n">{{ h.yield_text }}</td><td>{{ h.destination }}</td></tr>
+{% else %}<tr><td colspan="{{ 5 if d.show_field_column else 4 }}" class="empty">本期無採收紀錄</td></tr>{% endfor %}
+{% for t in d.harvest_totals %}<tr><td></td>{% if d.show_field_column %}<td></td>{% endif %}<td><b>本期合計</b></td><td class="n"><b>{{ t.text }}</b></td><td></td></tr>{% endfor %}
+{% if d.unparsed_yields %}<tr><td colspan="{{ 5 if d.show_field_column else 4 }}" class="empty">另有 {{ d.unparsed_yields }} 筆產量不是純數字（例如「約兩籃」），未列入合計</td></tr>{% endif %}
+</tbody>
+</table>
+
+{% if d.options.phi %}
+<div class="sec">三、施藥安全採收期核對</div>
+<table class="lt">
+<thead><tr><th style="width:13mm">採收日</th><th style="width:30mm">場區／品項</th><th style="width:22mm">核對結果</th><th>說明</th></tr></thead>
+<tbody>
+{% for p in d.phi %}<tr class="{{ p.status }}"><td class="c">{{ p.harvest_label }}</td><td>{{ p.field_text }}{% if p.crop_text %}<br>{{ p.crop_text }}{% endif %}</td><td class="c result">{{ p.result_label }}</td><td>{{ p.message }}</td></tr>
+{% else %}<tr><td colspan="4" class="empty">本期無採收紀錄，不需核對</td></tr>{% endfor %}
+</tbody>
+</table>
+{% endif %}
+
+<ol class="notes">
+{% if d.options.photos %}<li>照片欄為附錄編號；附錄逐張標示相機拍攝時間，沒有拍攝資訊的照片標示為上傳時間{% if d.options.gps %}，並列出田區與 GPS 座標{% else %}，本次未印出 GPS 座標{% endif %}。</li>
+{% else %}<li>照片欄為照片張數；本次匯出未附照片附錄。</li>{% endif %}
+<li>施藥之安全採收期取自植物醫生處方或記錄時選取的藥劑登記快照；手動輸入藥名者標示「未載明」，不代為推定。</li>
+{% if d.options.phi %}<li>安全採收期核對只依本系統內同田區、同期作物的施藥紀錄計算，未含系統外的施藥；結果供自主檢查，不代替殘留檢驗。</li>{% endif %}
+{% if d.any_missing %}<li>黃底列為產銷履歷欄位未齊全（依 {{ d.rule_version }} 規則檢查），可於「農事日誌」補填後重新匯出。</li>{% endif %}
+</ol>
+
+<div class="closing">
+<div class="signrow">
+<span>紀錄人：<span class="sig">{{ d.operator }}</span></span>
+<span>複核（植物診療師，選填）：<span class="sig">&nbsp;</span></span>
+<span>製表日期：{{ d.generated_label }}</span>
+</div>
+<div class="legal">本表由系統自農事日誌產出，紀錄應保存三年以上（產銷履歷農產品驗證基準第五條）。本表內容與日誌紀錄一致；日誌超過 24 小時後僅能補充備註與照片，更正內容以備註呈現。</div>
+</div>
+
+{% if d.options.photos and d.appendix %}
+<section class="appendix">
+<div class="sec">附錄：照片</div>
+<div class="grid">
+{% for p in d.appendix %}<div class="ph">
+<div class="img">{% if p.image %}<img src="{{ p.image }}" alt="附錄 {{ p.number }}">{% else %}<span class="empty">照片檔案不存在或已清除</span>{% endif %}</div>
+<div class="cap"><b>附錄 {{ p.number }}</b> · {{ p.log_date }} {{ p.kind_label }} · {{ p.field_text }}<br>{{ p.time_text }}{% if d.options.gps %}<br>{{ p.gps_text }}{% endif %}{% if p.caption %}<br>{{ p.caption }}{% endif %}</div>
+</div>{% endfor %}
+</div>
+</section>
+{% endif %}
+</body>
+</html>

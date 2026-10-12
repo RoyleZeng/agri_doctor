@@ -1,0 +1,100 @@
+[
+  {
+    "file": "PesticideDataQueryType.json",
+    "source": "https://data.moa.gov.tw/api/v1/PesticideDataQueryType/",
+    "retrieved_on": "2026-09-21",
+    "scope": "前兩列解析 fixture；不是完整快照",
+    "sha256": "144d0a4cde479d20d2efd0f486d856efea02ff3e90b1efe0589caa0cba5be6dc"
+  },
+  {
+    "file": "PestDiseaseDiagnosisServiceType.json",
+    "source": "https://data.moa.gov.tw/api/v1/PestDiseaseDiagnosisServiceType/",
+    "retrieved_on": "2026-09-21",
+    "scope": "前兩列解析 fixture；不是完整快照",
+    "sha256": "a115d5ff83877f742308186d311115d58366457947884b2db19496d05d90edf9"
+  },
+  {
+    "file": "AutoRainfallStationType.json",
+    "source": "https://data.moa.gov.tw/api/v1/AutoRainfallStationType/",
+    "retrieved_on": "2026-09-21",
+    "scope": "前兩列解析 fixture；不是完整快照",
+    "sha256": "0243564bc5b7cb05ee10acd63869c45231eaf6fa08ba02e5e8bb74252a7c50f0"
+  },
+  {
+    "file": "AutoWeatherStationType.json",
+    "source": "https://data.moa.gov.tw/api/v1/AutoWeatherStationType/",
+    "retrieved_on": "2026-09-21",
+    "scope": "前兩列解析 fixture；不是完整快照",
+    "sha256": "e2819e08cf6bd8e84cd1a90ca86c5c0837a4a7927c066cb2983e9cfcdf9b6213"
+  },
+  {
+    "file": "PlantEpidemicType.json",
+    "source": "https://data.moa.gov.tw/api/v1/PlantEpidemicType/",
+    "retrieved_on": "2026-09-21",
+    "scope": "前兩列解析 fixture；不是完整快照",
+    "sha256": "abd7ea39a5ee7b2500c4b301078b04f7ac436e47d5f0d2549b19e1769128e2f9"
+  },
+  {
+    "file": "TaiwanMeteorologicalStationInformationType.json",
+    "source": "https://data.moa.gov.tw/api/v1/TaiwanMeteorologicalStationInformationType/",
+    "retrieved_on": "2026-09-21",
+    "scope": "前兩列解析 fixture；不是完整快照",
+    "sha256": "5a0ae2dd73d5bb67d718232988c0e2d6698d79c48d06399b3586fbb6c9beb846"
+  },
+  {
+    "file": "PesticideManualType.json",
+    "source": "https://data.moa.gov.tw/api/v1/PesticideManualType/",
+    "retrieved_on": "2026-09-21",
+    "scope": "前兩列解析 fixture；不是完整快照",
+    "sha256": "40945359181dce6c0d89263229bcf6957a640c8579e9117d0d0224f11f6da835"
+  },
+  {
+    "file": "TaiwanRainfallStationInformationType.json",
+    "source": "https://data.moa.gov.tw/api/v1/TaiwanRainfallStationInformationType/",
+    "retrieved_on": "2026-09-21",
+    "scope": "前兩列解析 fixture；不是完整快照",
+    "sha256": "bcee453a06c93715d6467828917d459e68c87b2552f9b7d2f7a8cf6132112047"
+  },
+  {
+    "file": "FertilizerIntegrationInfoType.json",
+    "source": "https://data.moa.gov.tw/api/v1/FertilizerIntegrationInfoType/",
+    "retrieved_on": "2026-09-21",
+    "scope": "前兩列解析 fixture；不是完整快照",
+    "sha256": "357f2b0c36eae8645de9b45ac7a230063d45a5ede4f812099e7fb8514120ea98"
+  },
+  {
+    "file": "ImportantAgriculturalPestDiagnosticsType.json",
+    "source": "https://data.moa.gov.tw/api/v1/ImportantAgriculturalPestDiagnosticsType/",
+    "retrieved_on": "2026-09-21",
+    "scope": "前兩列解析 fixture；不是完整快照",
+    "sha256": "b939ca7b590664cef0cd7bae1ddc9c9a8c98e670f3160f4a56320359329bd254"
+  },
+  {
+    "file": "PesticideType.json",
+    "source": "https://data.moa.gov.tw/api/v1/PesticideType/",
+    "retrieved_on": "2026-09-21",
+    "scope": "前兩列解析 fixture；不是完整快照",
+    "sha256": "d6fb42f75741f1d24ed901fbb8a932e3e170c5b00bb3f21cd5ea613e42b7c9db"
+  },
+  {
+    "file": "FruitVegetalePestControlType.json",
+    "source": "https://data.moa.gov.tw/api/v1/FruitVegetalePestControlType/",
+    "retrieved_on": "2026-09-21",
+    "scope": "前兩列解析 fixture；不是完整快照",
+    "sha256": "458bc85c99b083bd994cc0036d88ada2c869b4125172871a5f6f5990b935e234"
+  },
+  {
+    "file": "PesticideCompanyType.json",
+    "source": "https://data.moa.gov.tw/api/v1/PesticideCompanyType/",
+    "retrieved_on": "2026-09-21",
+    "scope": "前兩列解析 fixture；不是完整快照",
+    "sha256": "01bf71340968c1cd9b0801121d52db0c359ac4ee8f12af85356bd8dcbce80445"
+  },
+  {
+    "file": "TreePestInfoType.json",
+    "source": "https://data.moa.gov.tw/api/v1/TreePestInfoType/",
+    "retrieved_on": "2026-09-21",
+    "scope": "前兩列解析 fixture；不是完整快照",
+    "sha256": "803f350d213e210ef31535cef035baa44dde289463eccbde488fdc91ee01982d"
+  }
+]

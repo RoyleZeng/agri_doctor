@@ -1,0 +1,27 @@
+# build context 會整包送進 docker daemon，而且 Dockerfile 的 `COPY . .` 會把它烤進映像層。
+# 沒有這個檔案時 context 是 3.1 GB（data/raw 2.7 GB + .venv 303 MB）：本機 build 光傳 context 就 30 秒，
+# 而且部署到 Lambda 時映像檔白白大 3 GB，冷啟動拉取時間跟著漲（見 docs/deployment.md）。
+
+# 執行期資料，不屬於映像檔：raw 是爬蟲原始快照、media 是農事日誌照片，
+# 正式環境這兩個都換成 S3（media_root / RAW_DATA_DIR）。
+# 用兩段式路徑而不是 data/，避免誤傷 app/data/（鄉鎮界 GeoJSON 與 planning_archive 是程式的一部分，必須進映像檔）。
+data/raw/
+data/media/
+
+# 本機虛擬環境：容器內由 pip install -r requirements.txt 自己裝。
+# 而且這是主機平台（macOS）的二進位檔，複製進 Linux 容器只會壞掉。
+.venv/
+
+# 快取
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# 機密不進映像檔：開發時靠 compose 的 bind mount 讀本機 .env，正式環境走環境變數。
+# .env.example 要留著（它是文件）。
+.env
+
+# tests/（8 MB）刻意**不**排除：離線測試不需要資料庫或網路，部署後要驗證環境時
+# 可以直接在容器裡跑 `python -m pytest tests/ -q`。

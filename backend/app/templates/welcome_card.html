@@ -1,0 +1,42 @@
+{#- 代建帳號的歡迎小卡：一頁 A6，印出來或拍給農民。
+    刻意只有帳號、一次性密碼與網址三件事——紙卡上東西一多，真正要唸的那兩行就會被蓋掉。 -#}
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<style>
+@font-face { font-family: 'ReportSerif'; src: url('{{ font_url }}'); }
+@page { size: A6; margin: 10mm; }
+body { font-family: 'ReportSerif', serif; color: #1b2620; margin: 0; line-height: 1.6; }
+h1 { font-size: 15pt; margin: 0 0 2mm; }
+.sub { font-size: 8pt; color: #617066; margin: 0 0 5mm; }
+.box { border: 1px solid #cfd6ce; border-radius: 3mm; padding: 4mm; margin-bottom: 4mm; }
+.row { display: flex; align-items: baseline; gap: 3mm; margin-bottom: 2mm; }
+.row:last-child { margin-bottom: 0; }
+.k { font-size: 8pt; color: #617066; width: 18mm; flex: none; }
+.v { font-size: 13pt; font-weight: 700; letter-spacing: 0.5pt; }
+.url { font-size: 9pt; word-break: break-all; }
+.note { font-size: 7.5pt; color: #617066; line-height: 1.7; }
+.warn { color: #a8342a; }
+</style>
+</head>
+<body>
+  <h1>{{ farmer.name }} 的農場帳號</h1>
+  <p class="sub">{{ farmer.farm_name }} · {{ farmer.location }}　由 {{ doctor_name }} 建立</p>
+
+  <div class="box">
+    <div class="row"><span class="k">帳號</span><span class="v">{{ username }}</span></div>
+    <div class="row"><span class="k">一次性密碼</span><span class="v">{{ password }}</span></div>
+    <div class="row"><span class="k">登入網址</span><span class="url">{{ login_url }}</span></div>
+  </div>
+
+  <p class="note">
+    <b class="warn">這組密碼只能用到 {{ expires_text }}，而且第一次登入後必須自己換一組。</b>
+    換過之後這個帳號就只有您本人進得去——建立帳號的植物醫生也不行。
+  </p>
+  <p class="note">
+    您隨時可以在「我的農場 → 與植物醫生協作」解除與 {{ doctor_name }} 的連結；
+    解除後對方就看不到您的田區、日誌與規劃。
+  </p>
+</body>
+</html>

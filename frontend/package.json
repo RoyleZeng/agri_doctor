@@ -1,0 +1,32 @@
+{
+  "name": "agri-doctor-web",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "test:consult": "tsc --skipLibCheck --target ES2022 --module NodeNext --moduleResolution NodeNext --outDir .test-build --rootDir . src/composables/consultState.ts tests/consult-state.test.ts && node .test-build/tests/consult-state.test.js",
+    "test:identify": "tsc --strict --skipLibCheck --target ES2022 --module NodeNext --moduleResolution NodeNext --outDir .test-build --rootDir . src/composables/identificationDemo.ts tests/identification-demo.test.ts && node .test-build/tests/identification-demo.test.js",
+    "preview": "vite preview",
+    "test:farm-log": "tsc --strict --skipLibCheck --target ES2022 --module NodeNext --moduleResolution NodeNext --outDir .test-build --rootDir . src/composables/farmLog.ts tests/farm-log.test.ts && node .test-build/tests/farm-log.test.js",
+    "test:precision": "tsc --strict --skipLibCheck --target ES2022 --module NodeNext --moduleResolution NodeNext --outDir .test-build --rootDir . src/composables/precisionState.ts tests/precision-state.test.ts && node .test-build/tests/precision-state.test.js",
+    "test:session": "tsc --strict --skipLibCheck --target ES2022 --module NodeNext --moduleResolution NodeNext --outDir .test-build --rootDir . src/stores/session.ts tests/session-store.test.ts && node .test-build/tests/session-store.test.js",
+    "test:timeline": "tsc --strict --skipLibCheck --target ES2022 --module NodeNext --moduleResolution NodeNext --outDir .test-build --rootDir . src/composables/timelineLanes.ts tests/timeline-lanes.test.ts && node .test-build/tests/timeline-lanes.test.js",
+    "test:navigation": "tsc --strict --skipLibCheck --target ES2022 --module NodeNext --moduleResolution NodeNext --outDir .test-build --rootDir . src/composables/navigation.ts tests/navigation.test.ts && node .test-build/tests/navigation.test.js",
+    "test:banners": "tsc --strict --skipLibCheck --target ES2022 --module NodeNext --moduleResolution NodeNext --outDir .test-build --rootDir . src/composables/banners.ts tests/banners.test.ts && node .test-build/tests/banners.test.js",
+    "test:record-flow": "tsc --strict --skipLibCheck --target ES2022 --module NodeNext --moduleResolution NodeNext --outDir .test-build --rootDir . src/composables/recordFlow.ts tests/record-flow.test.ts && node .test-build/tests/record-flow.test.js"
+  },
+  "dependencies": {
+    "leaflet": "^1.9.4",
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.0"
+  },
+  "devDependencies": {
+    "@types/leaflet": "^1.9.22",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.5",
+    "vue-tsc": "^2.2.0"
+  }
+}

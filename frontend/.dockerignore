@@ -1,0 +1,9 @@
+# node_modules 一定要排除：Dockerfile 自己跑 npm install，而且主機（macOS）裝出來的原生模組
+# 在 node:22-alpine 裡不能用。沒排除的話 69 MB 會白白傳進 daemon 再被 `COPY . .` 覆蓋掉容器自己裝的版本。
+node_modules/
+
+# 建置產物與測試暫存檔，容器內會重新產生。
+dist/
+.test-build/
+
+.env

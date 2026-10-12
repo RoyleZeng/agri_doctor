@@ -1,0 +1,36 @@
+[
+  {
+    "CaseName": "肖楠疫病",
+    "TreeType": "肖楠紅檜扁柏",
+    "Location": "花蓮縣  ",
+    "Plant_Quantity": "",
+    "Injury_Place": "莖、枝條、葉",
+    "Plant_Time": "5年以下",
+    "symptom": "由葉部感染呈褐色再蔓延至莖部",
+    "Plant_Place": "林地",
+    "Plant_Condition": "植被泥土面(地表有草皮或矮灌木)",
+    "DeliverWay": "郵寄",
+    "DiagnosisMethod": "樣本檢驗",
+    "Injury_Description": "寄送之標本經過組織分離及培養發現為肖楠疫病及根腐病所危害。 本病原危害其根及莖部，被害根部變褐色至暗褐色腐敗，莖之地際部或地下之主根與細根同時被害。其皮層變暗色腐敗，其內之木質部也變褐色。被害植株的地上部生長不良，黃化萎凋，最後全株枯死。",
+    "Injury_Type": "病害",
+    "ScientificName": "Phytophora cryptogea Pethybridge & Lafferty",
+    "Advice": "1. 林木生育地保持良好排水，儘量避免積水。 2. 藥劑防治：鋅錳滅達樂及亞磷酸，以土壤灌注方式施藥，亞磷酸也可用樹幹灌注。以殺菌劑之稀釋液澆淋於苗床土壤。此法可用以預防此類病害發生，或是澆淋於苗床上之發病跡地，以防止病害擴散，也是常用之防治法，尤其常用於病發後之緊急處理。但有時應用此法，所得效果可能不盡如人意。一般常用之防治藥劑有依得利、地特菌(Terrazole)等。"
+  },
+  {
+    "CaseName": "刺桐釉小蜂",
+    "TreeType": "刺桐",
+    "Location": "宜蘭縣  ",
+    "Plant_Quantity": "50株",
+    "Injury_Place": "",
+    "Plant_Time": "5年以下",
+    "symptom": "有發現蟲癭, 七月時嚴重落葉, 九月初轉好, 枝幹乾枯, 每株皆感病, 但嚴重程度不一致.",
+    "Plant_Place": "公園、校園",
+    "Plant_Condition": "植被泥土面(地表有草皮或矮灌木)",
+    "DeliverWay": "e-mail",
+    "DiagnosisMethod": "電話訪談",
+    "Injury_Description": "有發現蟲癭, 七月時嚴重落葉, 九月初轉好, 枝幹乾枯, 每株皆感病, 但嚴重程度不一致.",
+    "Injury_Type": "蟲害",
+    "ScientificName": "Quadrastichus erythrinae Kim",
+    "Advice": "申請人已將樹木砍除，應將落葉銷毀避免成蟲羽化擴散。"
+  }
+]

@@ -1,0 +1,56 @@
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: agri
+      POSTGRES_PASSWORD: agri
+      POSTGRES_DB: agri_doctor
+    # 5432 常被其他專案佔用，對外開 5433；容器之間仍走 db:5432。
+    ports: ["5433:5432"]
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U agri -d agri_doctor"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  api:
+    build: ./backend
+    environment:
+      DATABASE_URL: postgresql+psycopg://agri:agri@db:5432/agri_doctor
+      RAW_DATA_DIR: /app/data/raw
+    depends_on:
+      db: { condition: service_healthy }
+    ports: ["8000:8000"]
+    volumes:
+      - ./backend:/app
+    command: >
+      sh -c "python -m app.db.migrate &&
+             uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload"
+
+  crawler:
+    build: ./backend
+    environment:
+      DATABASE_URL: postgresql+psycopg://agri:agri@db:5432/agri_doctor
+      RAW_DATA_DIR: /app/data/raw
+    depends_on:
+      db: { condition: service_healthy }
+    volumes:
+      - ./backend:/app
+    command: python -m app.scheduler
+    restart: unless-stopped
+
+  web:
+    build: ./frontend
+    environment:
+      API_URL: http://api:8000
+    depends_on: [api]
+    ports: ["5173:5173"]
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    command: npm run dev -- --host 0.0.0.0
+
+volumes:
+  pgdata:

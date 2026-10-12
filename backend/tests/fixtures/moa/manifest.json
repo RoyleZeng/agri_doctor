@@ -1,0 +1,21 @@
+{
+  "retrieved_on": "2026-09-21",
+  "purpose": "官方回應離線解析測試；未使用 API 金鑰",
+  "files": [
+    {
+      "file": "market.json",
+      "url": "https://data.moa.gov.tw/api/v1/AgriProductsTransType/?Start_time=115.09.15&End_time=115.09.21&CropName=番茄",
+      "sha256": "b1a533c1707cad192edffb363df1505625cf8cdcfe678912fdf02e654760a9d9"
+    },
+    {
+      "file": "cost.json",
+      "url": "https://data.moa.gov.tw/api/v1/ProductCost/",
+      "sha256": "ff1fb1c57c4a79a3d246e66bc7d9d8e04536e9743c3982c9beedc535efa7b02f"
+    },
+    {
+      "file": "crops.json",
+      "url": "https://data.moa.gov.tw/api/v1/CropType/?CropName=番茄",
+      "sha256": "b20fdcb685cde846e14025d6bb18cc0607ae257dfd7a83f833be37b8223d6d01"
+    }
+  ]
+}

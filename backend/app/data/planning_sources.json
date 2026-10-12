@@ -1,0 +1,80 @@
+[
+  {
+    "id": "rice-care",
+    "title": "台灣良質米生產技術之改進",
+    "publisher": "農業部",
+    "url": "https://www.moa.gov.tw/ws.php?id=2415",
+    "fetched_at": "2026-09-08T09:06:49.719819+00:00",
+    "publication_date": null,
+    "status": "ok",
+    "sha256": "404b717ee61d970b384a3cc52bd0d39f2a0e2c6adbb5d2474de4fc8e9de6b9ca",
+    "resolved_url": "https://www.moa.gov.tw/ws.php?id=2415",
+    "bytes": 48103,
+    "snapshot": "app/data/planning_archive/rice-care-404b717ee61d970b384a3cc52bd0d39f2a0e2c6adbb5d2474de4fc8e9de6b9ca.html"
+  },
+  {
+    "id": "rice-pests",
+    "title": "一期稻作病蟲害管理要點",
+    "publisher": "農業知識入口網",
+    "url": "https://kmweb.moa.gov.tw/knowledgebase.php?func=1&id=195236&keyword=&type=13180",
+    "fetched_at": "2026-09-08T09:06:49.719819+00:00",
+    "publication_date": null,
+    "status": "ok",
+    "sha256": "7289d17827f902b9eb3dba7b10d613832571a1acf1c82c64f771d96982ec11ee",
+    "resolved_url": "https://kmweb.moa.gov.tw/knowledgebase.php?func=1&id=195236&keyword=&type=13180",
+    "bytes": 42128,
+    "snapshot": "app/data/planning_archive/rice-pests-7289d17827f902b9eb3dba7b10d613832571a1acf1c82c64f771d96982ec11ee.html"
+  },
+  {
+    "id": "tomato-care",
+    "title": "小果番茄栽培管理",
+    "publisher": "臺南區農業改良場",
+    "url": "https://book.tndais.gov.tw/Brochure/tech96.htm",
+    "fetched_at": "2026-09-08T09:06:49.719819+00:00",
+    "publication_date": null,
+    "status": "ok",
+    "sha256": "69ad90e103dd7420f7e43520b7595fcccfae0ff525bdce3c7b87ac7bd9e14bbf",
+    "resolved_url": "https://book.tndais.gov.tw/Brochure/tech96.htm",
+    "bytes": 45103,
+    "snapshot": "app/data/planning_archive/tomato-care-69ad90e103dd7420f7e43520b7595fcccfae0ff525bdce3c7b87ac7bd9e14bbf.html"
+  },
+  {
+    "id": "cabbage-care",
+    "title": "甘藍田間管理",
+    "publisher": "農業知識入口網・甘藍主題館",
+    "url": "https://kmweb.moa.gov.tw/subject/subject.php?id=13325",
+    "fetched_at": "2026-09-08T09:06:49.719819+00:00",
+    "publication_date": null,
+    "status": "ok",
+    "sha256": "cdcc226a5bdf9787686461e44d8b90d3f9c1ea8f0f781e757a7360ce7af5b126",
+    "resolved_url": "https://kmweb.moa.gov.tw/subject/subject.php?id=13325",
+    "bytes": 31060,
+    "snapshot": "app/data/planning_archive/cabbage-care-cdcc226a5bdf9787686461e44d8b90d3f9c1ea8f0f781e757a7360ce7af5b126.html"
+  },
+  {
+    "id": "cabbage-disease",
+    "title": "甘藍黑腐病",
+    "publisher": "農業知識入口網・甘藍主題館",
+    "url": "https://kmweb.moa.gov.tw/subject/subject.php?id=13434&print=Y",
+    "fetched_at": "2026-09-08T09:06:49.719819+00:00",
+    "publication_date": null,
+    "status": "ok",
+    "sha256": "731de40a5a1841210c880066455219a53df862aabe37b1d1f8c5031ffb5acf6a",
+    "resolved_url": "https://kmweb.moa.gov.tw/subject/subject.php?id=13434&print=Y",
+    "bytes": 4479,
+    "snapshot": "app/data/planning_archive/cabbage-disease-731de40a5a1841210c880066455219a53df862aabe37b1d1f8c5031ffb5acf6a.html"
+  },
+  {
+    "id": "cabbage-pests",
+    "title": "設施栽培蔬菜害蟲之生態與防治",
+    "publisher": "臺南區農業改良場",
+    "url": "https://book.tndais.gov.tw/Brochure/tech97.htm",
+    "fetched_at": "2026-09-08T09:06:49.719819+00:00",
+    "publication_date": null,
+    "status": "ok",
+    "sha256": "8ea5ce47a65000bb5f07f1f3ce5b7673da85751afb598d8941ab4243aeb9b3e4",
+    "resolved_url": "https://book.tndais.gov.tw/Brochure/tech97.htm",
+    "bytes": 87698,
+    "snapshot": "app/data/planning_archive/cabbage-pests-8ea5ce47a65000bb5f07f1f3ce5b7673da85751afb598d8941ab4243aeb9b3e4.html"
+  }
+]

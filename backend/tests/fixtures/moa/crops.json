@@ -1,0 +1,42 @@
+{
+  "RS": "OK",
+  "Data": [
+    {
+      "CropCode": "70",
+      "CropName": "小番茄-其他"
+    },
+    {
+      "CropCode": "71",
+      "CropName": "小番茄-ㄧ般"
+    },
+    {
+      "CropCode": "72",
+      "CropName": "小番茄-聖女"
+    },
+    {
+      "CropCode": "73",
+      "CropName": "小番茄-嬌女"
+    },
+    {
+      "CropCode": "74",
+      "CropName": "小番茄-玉女"
+    },
+    {
+      "CropCode": "FJ0",
+      "CropName": "番茄-其他"
+    },
+    {
+      "CropCode": "FJ1",
+      "CropName": "番茄-黑柿"
+    },
+    {
+      "CropCode": "FJ2",
+      "CropName": "番茄-粉柿"
+    },
+    {
+      "CropCode": "FJ3",
+      "CropName": "番茄-牛番茄"
+    }
+  ],
+  "Next": false
+}

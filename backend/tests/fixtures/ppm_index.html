@@ -1,0 +1,219 @@
+
+<html>
+	<head>
+		<title>植物保護資訊系統</title>
+		<script type="text/javascript" language="javascript" src="JsScripts/TreeMenu.js"></script>
+		<meta name="Web Application System Builder" content="Web Application System Builder,Http://www.assota.com.tw"/>
+		<meta name="CODE_LANGUAGE" content="C#"/>
+		<meta name="vs_defaultClientScript" content="JavaScript"/>
+		<meta http-equiv="Pragma" content="no-cache"/>
+		<meta http-equiv="expires" content="0"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=0.1, maximum-scale=5.0, user-scalable=0"/>
+        <link rel="stylesheet" href="Styles/RWD.css" type="text/css"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <script src="JsScripts/respond.min.js" type="text/javascript"></script>
+        <script src="JsScripts/respond.js" type="text/javascript"></script>
+	<link rel="stylesheet" href="Styles/ASSearchSuggest.css" type="text/css">
+	<script language="JavaScript" type="text/javascript" src="JsScripts/ASSearchSuggest.js">
+	</script>
+	<script language="JavaScript" type="text/javascript" src="JsScripts/ASSearchSuggest2.js">
+	</script>
+<!-- Facebook Opengraph -->
+<meta property="og:locale" content="zh_TW" />
+<meta property="og:type" content="website" />
+<meta property="type" content="website">
+<meta property="twitter:type" content="website">
+<meta property="og:image" content="images/PPISLOGO.PNG" />
+<meta property="image" content="images/PPISLOGO.PNG" />
+<meta itemprop="image" content="images/PPISLOGO.PNG" />
+<meta property="twitter:image" content="images/PPISLOGO.PNG" />
+<meta property="twitter:image:src" content="images/PPISLOGO.PNG" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="120" />
+<meta property="og:image:height" content="120" />
+<!-- End Facebook Opengraph -->
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"  />
+<link rel="bookmark" href="images/favicon.ico" type="image/x-icon"  />
+<link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+<link rel="apple-touch-icon-precomposed" href="images/favicon.ico" />
+<meta name="msapplication-TileImage" content="images/favicon.ico">
+
+	</head>
+    
+    <script language="javascript" type="text/javascript">
+        function MENU_SHOW() {
+            var odiv1 = document.getElementById("DA_MENU2");
+            if (odiv1.style.display != "none") {
+                odiv1.style.display = "none";
+            }
+            else {
+                odiv1.style.display = "block";
+            }
+        }
+
+        function SRH1_color() {
+            var SRH1 = document.getElementById("SRH1");
+            if (SRH1.value == '請在此輸入關鍵字...') {
+                SRH1.style.color = 'gray';
+            }
+            else {
+                SRH1.style.color = 'black';
+            }
+        }
+        window.onload = SRH1_color;
+</script>
+	<body class="Body">
+		<form method="post" action="./" id="Form_menu">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTMxOTY5NjQ0OA9kFgICAw9kFhICAw8PZBYCHglvbmtleWRvd24FT2lmIChldmVudC5rZXlDb2RlPT0xMyl7ZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ2J1dHRvbjEnKS5mb2N1cygpO3JldHVybiB0cnVlO31kAgcPFgIeCWlubmVyaHRtbAWgB+eGsemWgOmXnOmNteWtl++8mjxhIGhyZWY9ImphdmFzY3JpcHQ6dm9pZCgwKSIgY2xhc3M9J21lbnVJdGVtJyBkYXRhLXVybD0nUExDMDMwMS5hc3B4P0FTUGFyYW09SlRkaVJFdGFKVEJtTWlVelpTcHBKVEE1SlRJemVGSjJYeVUxWWxRbE1HTT0nIj5IY1BjRWdtcDwvYT7jgIE8YSBocmVmPSJqYXZhc2NyaXB0OnZvaWQoMCkiIGNsYXNzPSdtZW51SXRlbScgZGF0YS11cmw9J1BMQzAzMDEuYXNweD9BU1BhcmFtPUpUZGlSRXRhSlRCbU1pVXpaU3BwWkNVeU5TVXhaU1V4TkZFbE1EZ2xNVE5HSlRGbFpEWmthalY1WlVwVEpURTEnIj7msLTnqLs8L2E+44CBPGEgaHJlZj0iamF2YXNjcmlwdDp2b2lkKDApIiBjbGFzcz0nbWVudUl0ZW0nIGRhdGEtdXJsPSdQTEMwMzAxLmFzcHg/QVNQYXJhbT1KVGRpUkV0YUpUQm1NaVV6WlNwcFpDVXlOU1V4TUNVeE5DVXdZbGtsTVRNbE1XUWxNVGhrTm1WcWJTVXlOR1VsTVRGU0pURTEnIj7oipLmnpw8L2E+44CBPGEgaHJlZj0iamF2YXNjcmlwdDp2b2lkKDApIiBjbGFzcz0nbWVudUl0ZW0nIGRhdGEtdXJsPSdQTEMwMzAxLmFzcHg/QVNQYXJhbT1hMWhMWkNzbE0yVTJjaVV4WXlVeU1pVXhNRXQwVkZWR0pUQXknIj5IY1BjRWdtcDwvYT7jgIE8YSBocmVmPSJqYXZhc2NyaXB0OnZvaWQoMCkiIGNsYXNzPSdtZW51SXRlbScgZGF0YS11cmw9J1BMQzAzMDEuYXNweD9BU1BhcmFtPWExaExaQ3NsTTJVMmNuRnpkQ1V3WkNVd05sRlpXbFJDS3lFeUlYST0nIj4ke2FscGhhcmFuPC9hPuOAgTxhIGhyZWY9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NCAg5b2w5YyW5Zyw5Y2A5p2x5pa55p6c5a+m6KCF5peP576k5a+G5bqm5LiK5Y2H77yM57Gy6KuL6L6y5Y+L5Yqg5by36Ziy5rK744CC5b2w5YyW57ij5pS/5bqc44CB6Ziy5qqi572y5Y+K55Sw6YKK5aW95bmr5omL6Zec5b+D5oKo44CCPC9hPjwvbWFycXVlZT5kAhkPFgIfAQXgBOiri+aMkemBuOaCqOeahOS9v+eUqOi6q+S7ve+8mjxicj48dWwgaWQ9IkRBX01FTlUwIiBydW5hdD0ic2VydmVyIiBuYW1lPSJEQV9NRU5VIj48bGk+PGRpdiBjbGFzcz0nbWVudUl0ZW0nIGRhdGEtdXJsPSdNZW51LmFzcHg/QVNQYXJhbT1KVGRrV0ZCWUpURTBKVEU0TmpacGN3PT0nIiBzdHlsZT0iY3Vyc29yOiBwb2ludGVyOyI+6L6y44CA44CA5Y+LPC9kaXY+PC9saT48bGk+PGRpdiBjbGFzcz0nbWVudUl0ZW0nIGRhdGEtdXJsPSdNZW51LmFzcHg/QVNQYXJhbT1KVGRrV0ZCWUpURTBKVEU0TmpacGNnPT0nIiBzdHlsZT0iY3Vyc29yOiBwb2ludGVyOyI+6L6y6Jel5qWt6ICFPC9kaXY+PC9saT48bGk+PGRpdiBjbGFzcz0nbWVudUl0ZW0nIGRhdGEtdXJsPSdNZW51LmFzcHg/QVNQYXJhbT1KVGRrV0ZCWUpURTBKVEU0TmpacGRRPT0nIiBzdHlsZT0iY3Vyc29yOiBwb2ludGVyOyI+56CU56m25Lq65ZOhPC9kaXY+PC9saT48bGk+PGRpdiBjbGFzcz0nbWVudUl0ZW0nIGRhdGEtdXJsPSdNZW51LmFzcHg/QVNQYXJhbT1KVGRrV0ZCWUpURTBKVEU0TmpacGRBPT0nIiBzdHlsZT0iY3Vyc29yOiBwb2ludGVyOyI+5YWo6YOo5Yqf6IO9PC9kaXY+PC9saT48L3VsPjxici8+ZAIbDw8WAh4ISW1hZ2VVcmwF1y5kYXRhOmltYWdlL2pwZWc7YmFzZTY0LC85ai80QUFRU2taSlJnQUJBUUVBWUFCZ0FBRC8yd0JEQUFnR0JnY0dCUWdIQndjSkNRZ0tEQlFOREFzTERCa1NFdzhVSFJvZkhoMGFIQndnSkM0bklDSXNJeHdjS0RjcExEQXhORFEwSHljNVBUZ3lQQzR6TkRMLzJ3QkRBUWtKQ1F3TERCZ05EUmd5SVJ3aE1qSXlNakl5TWpJeU1qSXlNakl5TWpJeU1qSXlNakl5TWpJeU1qSXlNakl5TWpJeU1qSXlNakl5TWpJeU1qSXlNakwvd0FBUkNBQVVBcFFEQVNJQUFoRUJBeEVCLzhRQUh3QUFBUVVCQVFFQkFRRUFBQUFBQUFBQUFBRUNBd1FGQmdjSUNRb0wvOFFBdFJBQUFnRURBd0lFQXdVRkJBUUFBQUY5QVFJREFBUVJCUkloTVVFR0UxRmhCeUp4RkRLQmthRUlJMEt4d1JWUzBmQWtNMkp5Z2drS0ZoY1lHUm9sSmljb0tTbzBOVFkzT0RrNlEwUkZSa2RJU1VwVFZGVldWMWhaV21Oa1pXWm5hR2xxYzNSMWRuZDRlWHFEaElXR2g0aUppcEtUbEpXV2w1aVptcUtqcEtXbXA2aXBxckt6dExXMnQ3aTV1c0xEeE1YR3g4akp5dExUMU5YVzE5aloydUhpNCtUbDV1Zm82ZXJ4OHZQMDlmYjMrUG42LzhRQUh3RUFBd0VCQVFFQkFRRUJBUUFBQUFBQUFBRUNBd1FGQmdjSUNRb0wvOFFBdFJFQUFnRUNCQVFEQkFjRkJBUUFBUUozQUFFQ0F4RUVCU0V4QmhKQlVRZGhjUk1pTW9FSUZFS1JvYkhCQ1NNelV2QVZZbkxSQ2hZa05PRWw4UmNZR1JvbUp5Z3BLalUyTnpnNU9rTkVSVVpIU0VsS1UxUlZWbGRZV1ZwalpHVm1aMmhwYW5OMGRYWjNlSGw2Z29PRWhZYUhpSW1La3BPVWxaYVhtSm1hb3FPa3BhYW5xS21xc3JPMHRiYTN1TG02d3NQRXhjYkh5TW5LMHRQVTFkYlgyTm5hNHVQazVlYm42T25xOHZQMDlmYjMrUG42LzlvQURBTUJBQUlSQXhFQVB3RDAvd0FXK0xiblFwMnNZNHJSWko3ZVdTQ2RyckRSbFVKQlpDaEdTMlFveWR4R09LZzhNK0xOVTEyOHQ3T05kTmI3UEJFOTQ3WEJNa3dkQVN5QlZBQlVuNWdlTWtESTYxYzhSNlRxT3FqVXJhd3RsczRaTGNtVzRqS0NXK2tDa0pIbnNnNkV0Z25vTURKcHVnZUhMM1JrMHdwRmJTeEpBcGtodVh6Slp6RUFTTkM0RGNOODJWeUJub1FDYXc5L244aWRibWo0bXVOVnRyS0Y5S0tySjVvTE0wY2tnSUhPMG9rYmtxUm5KQlhISFBPS3hMcnhUcWx0NG50YmVZNmJad1BaZmFIaXU3c3h4dUMyRnd6Ukt5eWRjcVFSanNEeldqNDRzZFZ2OUZoaTBpMWd1YmdYQ3N5VFJ4T0F1MXNuRW5HY2tlL1Axcmw5UThOZUpOVnRXTW1td1JTU1dkdnB5anowajhwVlpaSGtLcUNwWGVDQUZJSUg4Sm9xT1Y5TGc3bnBjUmtNU0dWVldRcU42bzI0QTl3RGdaSHZnVmlmMmpkLzhKLy9BR1o1ditoLzJYOW84dmFQOVo1dTNPY1o2ZHM0clp1WlhnZ2FTTzNrdUdHTVJSRlF6Yzl0eEE5K1RYSko0VXZibEp0Wm1ranQvRU1sMEx1SnM1V0pWRzFiZDJYR1YyOE1WeG5QOFdPZEpONldHenNxOGt1ZmlacTluNHFtam5oalN3aG5hR1MyOHNGd29mazVEZjZ6SEgzdHZ0M3IxSFQ3bTR1clJaTHF4a3NwdWpSU09qODRHY0ZTUVJuam5CNDZDdk80L0RPdUpybHhxSXNKOHlYaVNtZG83SnBpZ0JQeW9SdFZ3dzVjTU01QjJrNXhGWG0wNVFkem9mQTNpYWJYYkQ3TmRpU2ErdDBEM0Z3UEw4czd5U2dHMDlkdlVZNEtrSG11b3VYbGl0SnBJSWZQbVJHYU9MY0Yzc0J3dVR3TW5qTmNwNEowRzUwQ1cvU2ZURnQxdTJFNlBIY2VZSTE1eEEyZWR5NVB6QUVISjU0RmRYY3BMTGFUUndUZVJNNk1zY3UwTnNZamhzSGc0UE9LcW56Y211NExZaTA2ZTd1YkNPYStzdnNkeTJkOEhtaVRaeVFQbUhCeU1IOGFOUm11YmV3bW10SW9wWlVVc0Zsa0tMZ2U0Qi9MSDVVYWRCZDIxaEhEZlhuMnk1WE8rZnloSHY1Skh5amdZR0IrRkxmd1hGelpTUTIwMGNNampidmtpTWdBUFhnTXY4NmNyOG1tNVMzMUtmaHJVNXRaOE8yZW9YQ3hyTk9oWmhHQ0ZISkhHU2ZTdFJtVkZMTVFGQXlTVHdCV1Y0ZDBtZlE5SWkwNlc2anVZNFJpTmxoTVp4a25uNWpucjdWb1hkckRmV2t0cmNJWGhtVW82aGl1UWVveU9hcDN0b1RHOWxjNW5SdkZWMXEzaXlhdyt6eHg2ZWJZM0Z2SVFmTWtYY0ZEZGNZUEpISFRGZFpYTzJuaEczc2ZFcTZ0RGRYSGxwYmVRc0R5eVBqbnJ1WnprWS9oSXgzcm9xVUxxT3Y5YWdyM2R6bXRjMWpWZERrdDdpUnJHYTNudkZnVzNXSnhLVmJPQ0gzWUo5dHRkTFhNM1BocS91ZkVZMWVUVTdhVXhaRnRCUFpzeVFEMUdKQmx2Yy9weGpwcVVMMjFEcVlYaUhVYjdTcmVhN2p2ZE50cmRJaVkxdW8yWnBaQUdPMEVPdU1nREdNbnJXanBWMVBlNlZhM04xYk5iVHl4aG5oYnFoOUtnMUt5MU83TXlXMm8yOE52TEY1WmpsdERJVlBPU0NIWHFDT0NEMHFiU2ROaTBmU3JiVDRYZDQ0RTJoblBKcHh2ZGc5eXI0a3Y5UjA3UzFuMHkyKzBUbVpFSytTOHVGUFZ0cWtFNHBkQzFQOEF0S0dkamZRWFRSU2VXd2p0WHQyakk2aGxkaWMvbFZ5OWl2SlVqK3hYVWR2SXI1WXl3K2FycmdqQkc1VDFJT1FlMVU5RzBUK3k1cjY2bHVQdEYzZXkrWk5JSTlpOGNBS3VUZ0FlcE5KSjh6N2Y4TUQ2Vy9yY3Q2cGZMcG1sWGQ4eTd4YnhOSnQ5Y0RPSzUzUy9FZXB2cVdqVytvQzBhUFZiVnA0ekJHeUdOZ0EyRGxqdUdQWVYwdC9aeGFocDl4WnpaOHFlTm8yeDF3UmlzTFRQQzAxcGY2YmMzZW9wY2pUclkyOXVrZHVZK0NNWlk3ams0NDRBbzk3bjh2OEFoLzhBZ0JLOXRQNjIvd0NDZExYTmE1ckdxNkhKYjNFaldNMXZQZUxBdHVzVGlVcTJjRVB1d1Q3YmE2V3VadWZEVi9jK0l4cThtcDIwcGl5TGFDZXpaa2dIcU1TRExlNS9UakJLOTFZSHRvZE5XVHJkeHFkbmEzRjNhWEZqRkJCQTBqQzRoWnl6REp4a011QjA5YTFxd1BFbmgrNzE4d1JEVVVoc28yRHlXelFGeE1RZU54RHFjZTMvQU5iQlV2YjNSbWhvdW9OcTJpMmQrOFhsTmNSQnltYzR6VitvTE9LV0MwamltYUZuUVl6REVZMHgyQVVrNDQ5Nm5xeEs5dFFvb29vR0ZGRkZBSG5NL2l1L3V2RXQ5QmFYMXlscHZXTzBqV0JrWm5WQVpWeDlta1lsVDFCeGpQY2RPZzhJYWxxZDNGZVE2dXQzOW9XNGN3dE5hdEdEQ05vWDV2TFFFNXoyQjloWEd6ZUQ5WW4xaTV2cmpRMm10NTdpOGtNUW5nRW1KRXhHU1RrQWhqbk81c0VFaFIvRjFmZ25Rcmp3K2x6YlhkbGk1azI3N3lLUkRES3FnQlFGR0dCR1RuSzhuSkxISXJtZzU4MnBLdmNkcjNpQzYweldKSXJmejh4MkU4L2t2REhKRTJ4Q3drSlZ4SWczRGI4d3czUVlQTlZkSDhUelh1cWFhbDNkM2J5M2R1c3YyUzEwMW80b2dSOTUyZmN6S1N3QVpTRitYbmcxRjR0OFA2anFtc0xkNmJwa0VZaWllS2FjbFBNdVJLbmx0dEdSa291Y2IyWG5nY2RidW1hZFBaK0lMTzhUVE5TU0dIVGswMVZsTnVjS0dCM3N5eTU2ZFFGL3dxdmY1ZzF1YTNpWFZKTkYwT2JVVWtWRmhaZCtZUE5KQklYQVhlbk9TT2M5alhDM1hqL1VXL3RDRnIyMnRvNFBMMlQyMXZGSkkyN2s0VTNCVStueTcrQ2M3YTdYeFhaTnFtaHphWUxTN21XNVhtUzJNV1l5cERLU0hkY2pJNkQwUFRpdVhzUERGMkd2bjE3UnJ1OWErV0oyU3oxRWxCdEgzSEVrcXN6QWdISlp4enhqSEpVNTNLMFFkenRkUm12TFhScEpZWGphOFJCaHZzMGtpTS9IOENFdGcrMmNkZWNWNTNhK092RVFsakRxclJ5M2lXOHJYR25TQXdTTm5kR2dSdm1DWTZFaHpucDZlaWFqSGRYdWpTSmJSZVhkU0lDaVN6dEZzYmcvTThSSjQ3N1R6akdjSE5jSHBuZzdYQnJpTGNqeTdPSFZHdnpPMHJNSk5wRzNhdm10eTNPU3czQWRXYnBSVTVycmxCM08wOE4za2QvcENYRWVwejZpck5nM010djVJWWdBSGF1MWZsem4xN2pKeFVHc1NlSWZJa2V5L3MyeldGL01FODEwU3JScWNrU0tZdUFSMXd3STlmVThHYWRkNlQ0U3NiRytpOHE1aTh6ZW00TmpNakVjZ2tkQ0txNmpwbXZhclBEOXRoMDJTd2pjdWJCYmwxV1FnTHRNaitXZDRCM0hadFVmZHp1cTd2a1EraG8rSDlWdTlac211NTdCYldCbS93QkhZVEZ6TXY4QWZ3VlVoVHhqUEo2NEhHWXRaMXVTeTFUVDlQdFRCNWtyR2E2ZWI3a0ZzZytkMklQeWs5Rko0em5OWDdTWFUzbEl2YlMwaGoyOE5EZE5JU2ZUQmpYanJ6bXNIeE5vOTlxdHg5aXN0TXRCYXp0Rk5mWE1rb2pOeUViL0FGSjJxWHpnS1EzYnBRMjFIUU9nL1NOVDFJZUtMbTAxTy90cGJXNGdTWFRqRkJzU2NiY3VZMjNIcDNVa2s1QkdCMXVlS2RkaDBQU0pEOW9XSzl1Rk1Wb0NWeVpDTUEvTndGQklKSjRINGdHbmJXV3RMNGhVMzFqYlhHbHp1WjhOZEdjMmN5amgwTG9wQVBRS003VGtncU9EZjhWMitwWFhocTdoMGhwRnYyMmVVWXBmTGI3Nms0Ykl4eG52U1YrVmgwT1MwN3hicS84QWFkNWJUYXZvRXF3ZlpnWG51d2tjZzJmdlBMWlVHU3g1T2NoVHhnMTZIRkxITkVrc1RySkc2aGtkRGtNRDBJUGNWeGV0YUxyN2FUT05OZ2tpdXp0OHQ0dGV1WFlmTU00VndxbmpQVWo4NjdlaW56SzZZSTg1MC94WnFFM2d4NzJieEpwS1g0Z21ZUXlRcjUrNEZ0bzRrQXljREh5ZHh3ZS9hZUg3aTV1L0R1blhONUtzdHhOYnBJN3FtMEVzQWVucnp6L0lkSzVmUzlLOFIybmdDVFJXMHkwOHhyZWVQRFh1SHk1ZkhBUXJuNXVQbitwSGJxOUR0NWJQdy9wdHJPbXlhRzFpamtYSU9HQ2dFWkhIV2xUdnBmc0NQT1ovR1hpUk5RdXJjU3hxWXA5UVhHQVZBamkzS0F4andkaEJJN3RrQmdvSUo2RHdQcm1yYXpmWHkzOTJzME1OdmFzcW0yOG9obmozRWoyNFBZZzhGY0RnNU4xNEt2NUVlOHRyTzVGOWRUM0N1WnJ5QU5Hc29LbVNUYkZnZ2duS0t4MjUrWGtuRzk0UDBDNzBUVTlXRTBVZ3RuUzJpZ2xrY01aZkxRcXpZM01WQlBJQjZBZ2NZd0lncDh5di9XZ2xlNTFGeThzVnBOSkJENTh5SXpSeGJndTlnT0Z5ZUJrOFpxTFRwN3U1c0k1cjZ5K3gzTFozd2VhSk5uSkErWWNISXdmeHFXNVNXVzBtamdtOGlaMFpZNWRvYll4SERZUEJ3ZWNWRnAwRjNiV0VjTjllZmJMbGM3NS9LRWUva2tmS09CZ1lINFYwZFNoMTR0NjBTaXhrZ2prTERjMDhaY0JlL0FJeWVuY1ZsZUhOYXVOVmJVWWJsWVdrc3Jsb1BPZ0JDU1k3Z0VuQjlSazFkMW15dk5SMDJTMXNyLzdESkp3MDRqM3NGN2djakI5Ly93QmRRZUh0SGswUFR4WmVaYXZDZ0czeWJkb3lUM0xFdTI0bmowcVZmbThoUG9YTlV2bDB6U3J1K1pkNHQ0bWsyK3VCbkZjN3BmaVBVMzFMUnJmVUJhTkhxdHEwOFpnalpER3dBYkJ5eDNESHNLNlcvczR0UTArNHM1cytWUEcwYlk2NEl4V0ZwbmhhYTB2OU51YnZVVXVScDFzYmUzU08zTWZCR01zZHh5Y2NjQVVlOXorWC9ELzhBSlh0cC9XMy9CT2xybXRjMWpWZERrdDdpUnJHYTNudkZnVzNXSnhLVmJPQ0gzWUo5dHRkTFhNM1BocS91ZkVZMWVUVTdhVXhaRnRCUFpzeVFEMUdKQmx2Yy9weGdsZTZzRDIwT21ybXRkOFN2cCtzUTZaYmhVY3dtNG1uZTNrbkVhRGo3a2ZKT2UrUUFLNldzUFU5QWx1dFdYVkxLOVcxdXZzN1d6bVNIekZaQ2M5Tnk0SVBmUDRVVk9hM3VqTlBUcnBMM1RyZTVqdUlyaFpFRENXSlNxdDdnRWtqNkU4VlBKSXNVVHlPd1ZFQlppZXdGVXRGMHFIUk5JdDlPdDJabzRWeHVicXhKeVQrWk5WL0VscmVYK2ttd3Mwejlxa1dLWjl3SGx4RS9PZVR6eHh4NjFVbTdhQ2p0cUo0YXVyelVOSiszM2prL2FwR2xnUW9GOHVJbjVCeDE0NXlmV3RHOW5rdHJHNG5oZ2FlU09OblNKVHk1QXlBUHJVa1VTUXdwRkdvV05GQ3FvN0FkS2gxR3lqMUxUcml5bFoxam5qTWJNaHdRQ08xS1NmSzFFY2ZNNWpRUEZGL3FlcFdOdktiRzRTNXRXbWwrektVYTFaU0J0YkxIUEpBNkN1d3JtZE84SnZhNmxwMTdkM3NVNzZmYi9aNFBKdHZLTERHTXVkemJzRFBBeDFycHFJM3RxU3I5VEYxVyt1ZjdiMHZUTEtReHZLN1QzREJRMklVNmpucHVKQXpXMVdMcGRoYy93QnVhbnFsN0Y1Ynlzc0Z1dTRFaUZlL0JQM2lTZnlyYW9qZTEzL1g5Zm1WMU1UeExxTjVvK216NmpGZDJrVUVNZWZMbXRta1ozendBUkl1TThEcFYzUnA3MjUwZTFuMUdPT083a2pEeUpHQ0F1ZVFPU1QweFZUVzlCT3VYZW5tYTYyMmRyTDUwbHQ1ZWZPWWZkeTJlQVBUSGV0bWlLZDIySjdoUlJSVkRDaWlpZ0Fvb29vQUtLS0tBQ2lpaWdBb29vb0FLS0tLQUNpaWlnQW9vb29BS0tLS0FDaWlpZ0Fvb29vQUtLS0tBQ2lpaWdBb29vb0FLS0tLQUNpaWlnQW9vb29BS0tLS0FDaWlpZ0Fvb29vQUtLS0tBQ2lpaWdBb29vb0FLS0tLQUNpaWlnQW9vb29BS0tLS0FDaWlpZ0Fvb29vQUtLS0tBQ2lpaWdBb29vb0FLS0tLQUNpaWlnQW9vb29BS0tLS0FDaWlpZ0Fvb29vQUtLS0tBQ2lpaWdBb29vb0FLS0tLQUNpaWlnQW9vb29BS0tLS0FDaWlpZ0QvMlE9PWRkGAEFHl9fQ29udHJvbHNSZXF1aXJlUG9zdEJhY2tLZXlfXxYBBQdidXR0b24y9AdEIgHnR9Rt7UiavdV0YwPvlLBvo8BIfN473/af3+s=" />
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="7C1D11DC" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAbI788yU8ruwjh9Y5h+SsfgKVaK8qXPn1bsZMmA5amS17H1uWQrHqYRgG5PSRJ1ZefE2xQGtwS69Zp6VnuRt/EaijhEmcfuCMkyBcTzhnhxYg/x8A5LGfhSCBcnYzOtZgj5cU8RHNb+qJ4wJSbnEZV7si9Cb7TRtpbA9n7bUaKSLg==" />
+</div> 
+<script type="text/javascript" src="JsScripts/jquery.js"></script>
+<script type="text/javascript" src="JsScripts/jquery.cookie.js"></script>
+<script type="text/javascript" src="JsScripts/ShowProgressBar.js"></script>
+
+<style>
+.ann{overflow:hidden;float:left;display:block;}
+.box{height:20px;width:120px;}
+</style>
+<div id="divProgress" style="text-align:center; display: none; position: fixed; top: 50%;  left: 50%;" >
+    <img id="imgLoading" src="Images/loading.gif" />
+    <br />
+    <font color="#1B3563" size="2px">資料處理中</font>
+</div>
+<div id="divMaskFrame" style="background-color: #F2F4F7; display: none; left: 0px;
+    position: absolute; top: 0px;">
+</div>
+<div id="web-body" >
+ <div id="form" style="max-width: 1024px;">   
+ <div id="logo" style="max-width: 1024px;">
+ <a href="Menu.aspx"><image id="PPM_Logo_C" src="images/電腦版logo.PNG" /></a>
+ </div>        
+
+<div id="Computer_SRH" style="max-width: 1024px;">
+<div id="SRH_BAR" >
+    <input name="SRH1" type="text" value="請在此輸入關鍵字..." maxlength="200" id="SRH1" OnFocus="javascript:if(this.value==&#39;請在此輸入關鍵字...&#39;) {this.value=&#39;&#39;;document.getElementById(&#39;SRH1&#39;).style.color=&#39;black&#39;;}" OnBlur="javascript:if(this.value==&#39;&#39;) {this.value=&#39;請在此輸入關鍵字...&#39;;document.getElementById(&#39;SRH1&#39;).style.color=&#39;gray&#39;;}" onkeyup="searchSuggest(this,event);" onkeydown="if (event.keyCode==13){document.getElementById(&#39;button1&#39;).focus();return true;}" FOR="MSearch" autocomplete="off" style="top:50px;left:10px;font-size:20px;color:gray;box-shadow: 2px 0px 3px #F2F2F2;" /> <input type="submit" name="button1" value="搜尋" id="button1" style="height: 30px;width: 50px;" />
+	<div id="search_suggest" style="z-index: 2; visibility: hidden;position: absolute"></div>
+    <div id="HotKey_W" name="HotKey_W">熱門關鍵字：<a href="javascript:void(0)" class='menuItem' data-url='PLC0301.aspx?ASParam=JTdiREtaJTBmMiUzZSppJTA5JTIzeFJ2XyU1YlQlMGM='">HcPcEgmp</a>、<a href="javascript:void(0)" class='menuItem' data-url='PLC0301.aspx?ASParam=JTdiREtaJTBmMiUzZSppZCUyNSUxZSUxNFElMDglMTNGJTFlZDZkajV5ZUpTJTE1'">水稻</a>、<a href="javascript:void(0)" class='menuItem' data-url='PLC0301.aspx?ASParam=JTdiREtaJTBmMiUzZSppZCUyNSUxMCUxNCUwYlklMTMlMWQlMThkNmVqbSUyNGUlMTFSJTE1'">芒果</a>、<a href="javascript:void(0)" class='menuItem' data-url='PLC0301.aspx?ASParam=a1hLZCslM2U2ciUxYyUyMiUxMEt0VFVGJTAy'">HcPcEgmp</a>、<a href="javascript:void(0)" class='menuItem' data-url='PLC0301.aspx?ASParam=a1hLZCslM2U2cnFzdCUwZCUwNlFZWlRCKyEyIXI='">${alpharan</a>、<a href="javascript:void(0)" class='menuItem' data-url='PLC0301.aspx?ASParam=a1hLZCslM2U2cnElMjR5JTBkJTA5JTAyJTFkJTBmJTEwJTBmJTI0ZXYtNmR4JTFkJTE0ViUwMCUxMyUxY0tkMjBp'">達滅芬</a></div>
+    <div id="HotKey_P" name="HotKey_P"></div>
+</div>
+<div id="Member_W" name="Member_W" style="position: relative; top: -100px;left:250px"></div>
+</div>
+<div id="top" style="max-width: 1024px;">
+<div id="formBar">
+<span id="Bar_Text_C"><div id="Bar_Text_C1" name="Bar_Text_C1"><marquee 加在這>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='https://phis.aphia.gov.tw/list-1-102' target=_New>※2026/08/14  鳳梨釋迦進入夏季修剪期，請農友注意粉介殼蟲防治。臺東區農業改良場、防檢署及田邊好幫手關心您。</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='https://phis.aphia.gov.tw/list-1-102' target=_New>※2026/08/14  彰化地區東方果實蠅族群密度上升，籲請農友加強防治。彰化縣政府、防檢署及田邊好幫手關心您。</a></marquee></div></span>
+</div>
+<input name="Bar_Text" type="hidden" id="Bar_Text" />
+<div id="menu_Computer" style="margin: 5;">  
+   <div id="Menu_W" name="Menu_W">請挑選您的使用身份：<br><ul id="DA_MENU0" runat="server" name="DA_MENU"><li><div class='menuItem' data-url='Menu.aspx?ASParam=JTdkWFBYJTE0JTE4NjZpcw=='" style="cursor: pointer;">農　　友</div></li><li><div class='menuItem' data-url='Menu.aspx?ASParam=JTdkWFBYJTE0JTE4NjZpcg=='" style="cursor: pointer;">農藥業者</div></li><li><div class='menuItem' data-url='Menu.aspx?ASParam=JTdkWFBYJTE0JTE4NjZpdQ=='" style="cursor: pointer;">研究人員</div></li><li><div class='menuItem' data-url='Menu.aspx?ASParam=JTdkWFBYJTE0JTE4NjZpdA=='" style="cursor: pointer;">全部功能</div></li></ul><br/></div>
+
+
+
+        
+
+
+
+
+</div>
+
+
+
+<div id="menu_Mobile" style="position: fixed;z-index:5;height: 90%;">
+<table style="margin-left:auto;margin-right:auto;">
+<tr>
+<td >
+<a id="menu-toggle-A1" href="https://www.acri.gov.tw/"><image id="PPM_Logo_A1" class="PPM_Logo_M2" src="images/藥毒所logo.PNG" /></a>
+</td>
+<td >
+<a id="menu-toggle" href="Menu.aspx"><image id="PPM_Logo_A2" class="PPM_Logo_M" src="images/手機版logo.PNG" /></a>
+</td>
+<td >       
+    <a id="menu-toggle-A3" href="Menu.aspx"><image id="PPM_Logo_A3" class="PPM_Logo_M2" src="images/首頁.PNG" /></a>
+</td>
+</tr>
+</table>
+<table>
+<tr>
+<td style="width:100%;">
+    <input name="SRH2" type="text" maxlength="200" id="SRH2" onkeyup="searchSuggest2(this,event);" onkeydown="if (event.keyCode==13){document.getElementById(&#39;button2&#39;).focus();return true;}" FOR="MSearch" autocomplete="off" style="height:50px;width:100%;font-size:20px" />
+	<div id="search_suggest2" style="z-index: 2; visibility: hidden;position: absolute"></div>
+    </td>
+<td >
+ <input type="image" name="button2" id="button2" src="images/%e6%90%9c%e5%b0%8b.PNG" style="height:50px;" /> 
+ </td>
+</tr>
+</table>
+<div id="Div1">
+<div id="Bar_Text_M" name="Bar_Text_M"><marquee 加在這>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='https://phis.aphia.gov.tw/list-1-102' target=_New>※2026/08/14  鳳梨釋迦進入夏季修剪期，請農友注意粉介殼蟲防治。臺東區農業改良場、防檢署及田邊好幫手關心您。</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='https://phis.aphia.gov.tw/list-1-102' target=_New>※2026/08/14  彰化地區東方果實蠅族群密度上升，籲請農友加強防治。彰化縣政府、防檢署及田邊好幫手關心您。</a></marquee></div>
+</div>
+    <div style="overflow-x:scroll;height:70%;">
+   <div id="Menu_M" name="Menu_M">請挑選您的使用身份：<br><ul id="DA_MENU0" runat="server" name="DA_MENU"><li><div class='menuItem' data-url='Menu.aspx?ASParam=JTdkWFBYJTE0JTE4NjZpcw=='" style="cursor: pointer;">農　　友</div></li><li><div class='menuItem' data-url='Menu.aspx?ASParam=JTdkWFBYJTE0JTE4NjZpcg=='" style="cursor: pointer;">農藥業者</div></li><li><div class='menuItem' data-url='Menu.aspx?ASParam=JTdkWFBYJTE0JTE4NjZpdQ=='" style="cursor: pointer;">研究人員</div></li><li><div class='menuItem' data-url='Menu.aspx?ASParam=JTdkWFBYJTE0JTE4NjZpdA=='" style="cursor: pointer;">全部功能</div></li></ul><br/></div>
+
+    
+    </div>
+</div>
+
+</div>
+
+<div id="content1" style="max-width: 1024px;">
+
+</div>
+<div id="content2" style="max-width: 1024px;">
+</div>
+<div id="footer" style="max-width: 1024px;max-height: 50px;">
+
+<table style="margin-left:auto;margin-right:auto;">
+<tr>
+<td>
+<a href="tel:0800022228"><image class="PPM_Logo_M2" src="images/電話.PNG" /></a>
+</td>
+<td>
+<a href="tel:0800022228">植物保護服務諮詢專線</a>
+</td>
+</tr>
+</table>
+</div>
+<div id="footer_Computer" style="max-width: 1024px;">
+<div >
+<img id="img_PPW" src="data:image/jpeg;base64,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" style="z-index: 10;" />
+</div>
+<div style="height: 300px;background:#EDF4A9">
+<table>
+<tr>
+<td style="text-align:left;width:15%;float: left;height: auto;margin: 20px;max-height:300px;max-width: 200px;" >
+<a id="A1" href="https://www.acri.gov.tw/" target="_blank"><image id="PPM_Logo" class="Com_Img" src="images/Logo112.PNG" /></a>
+</td>
+<td style="float: left;width:45%;;max-width: 400px;" >
+ <div id="footer_info" style="font-size:14px;text-align: left;margin: 20px 0">
+         <a style="font-size:20px;font-weight: bold;">植物保護服務諮詢專線：0800-0222-28</a><br />
+        農業部農業藥物試驗所<br />
+        版權所有，未經同意請勿擅自連結相關網頁<br />
+        Copyright © 2018 ACRI, MOA<br />
+        地址：41358 臺中市霧峰區舊正里光明路11號<br />
+        電話：04-23302101。傳真：04-23323073<br />
+        建議使用Chrome、FireFox、Internet Explorer 9以上瀏覽器，最佳視窗解析度1024*768
+        </div>
+</td>
+
+<td style="text-align:left;width:15%;float: right;height: auto;margin: 5px;max-height:300px;max-width: 200px;" >
+<a><image id="PPM_Mob" class="Com_Img" style="float:right;" src="images/手機版植保資訊系統QRCODE.PNG" /></a>
+</td>
+<td style="text-align:left;width:15%;float: right;height: auto;margin: 5px;max-height:300px;max-width: 200px;" >
+<a id="A2" href="https://www.facebook.com/農業藥物試驗所-1005962589419105/" target="_blank"><image id="PPM_FB" class="Com_Img" style="float:left;" src="images/農藥所粉絲專頁QR.PNG" /></a>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+		</form>
+
+	</body>
+</html>
+

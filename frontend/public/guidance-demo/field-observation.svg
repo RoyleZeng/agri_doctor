@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="500" viewBox="0 0 960 500">
+<rect width="960" height="500" rx="24" fill="#eef4ef"/>
+<g font-family="sans-serif" fill="#245b48"><text x="50" y="64" font-size="28" font-weight="bold">巡田紀錄：從整塊田到細部</text><text x="50" y="102" font-size="18">介面操作示意 · 不是真實病徵照片，也不作為診斷依據</text></g>
+<g fill="white" stroke="#bfd0c3" stroke-width="2"><rect x="40" y="135" width="270" height="300" rx="18"/><rect x="345" y="135" width="270" height="300" rx="18"/><rect x="650" y="135" width="270" height="300" rx="18"/></g>
+<g stroke="#568a62" stroke-width="4" fill="none"><path d="M72 300L118 183L272 213L230 322Z"/><path d="M115 303L151 190M157 309L191 198M195 317L230 206"/><path d="M480 310V190M480 239Q410 177 435 251Q450 277 480 282M480 226Q550 164 531 251Q503 274 480 276"/><circle cx="777" cy="243" r="56"/><path d="M817 283L863 327"/></g>
+<g font-family="sans-serif" text-anchor="middle" fill="#245b48"><text x="175" y="367" font-size="24">1. 全田與位置</text><text x="480" y="367" font-size="24">2. 植株與部位</text><text x="785" y="367" font-size="24">3. 細節與敘述</text><text x="480" y="470" font-size="18">保留原始照片與觀察紀錄，交由植物醫生綜合判讀</text></g></svg>

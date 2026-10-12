@@ -1,0 +1,22 @@
+[
+  {
+    "Station_name": "馬祖",
+    "Station_ID": "467990",
+    "Station_Latitude": "26.16946700000000",
+    "Station_Longitude": "119.92315800000000",
+    "CITY": "連江縣",
+    "CITY_SN": "09007",
+    "TOWN": "南竿鄉",
+    "TOWN_SN": "09007010"
+  },
+  {
+    "Station_name": "東莒",
+    "Station_ID": "C0W110",
+    "Station_Latitude": "25.96519700000000",
+    "Station_Longitude": "119.98068600000000",
+    "CITY": "連江縣",
+    "CITY_SN": "09007",
+    "TOWN": "莒光鄉",
+    "TOWN_SN": "09007030"
+  }
+]
